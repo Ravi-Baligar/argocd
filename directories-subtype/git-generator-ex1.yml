@@ -9,14 +9,14 @@ spec:
       repoURL: https://github.com/Ravi-Baligar/argocd
       revision: main
       directories:
-      - path: v09-argocd-applicationSet-1/git-generator/resources/*
+      - path: resources/*
   template:
     metadata:
       name: '{{path.basename}}-application'
     spec:
       project: default
       source:
-        repoURL: https://github.com/devopshobbies/argocd-tutorial.git
+        repoURL: https://github.com/Ravi-Baligar/argocd
         targetRevision: main
         path: '{{path}}'
       destination:
